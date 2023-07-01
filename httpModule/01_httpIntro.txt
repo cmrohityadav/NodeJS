@@ -1,0 +1,5 @@
+HTTP: Hypertext Transfer Protocol
+It is a used for transmitting data over the internet.
+It defines how clients and servers communicate with each other and 
+how request and response should be formatted and transmitted .
+It is the foundation of data communication for the world wide web or the internet
