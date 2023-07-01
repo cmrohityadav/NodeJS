@@ -1,0 +1,4 @@
+The OS module in Node.js is utilized to retrieve details about the operating system of a computer.
+It offers methods for counication with the computer's operating system, including retrieving the
+hostnane and the amount of available system memory in bytes.
+
