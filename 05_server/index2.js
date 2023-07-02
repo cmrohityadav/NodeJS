@@ -43,10 +43,25 @@ const server=http.createServer((req,res)=>{
 
         
     }else if(req.url=='/product'){
-        res.statusCode='200';
-        res.setHeader('content-Type','application/json')
-        res.end(JSON.stringify({productName:'Product 1'}));
-    
+        const options={
+            hostname:'fakestoreapi.com',
+            path:'/products/1',
+            method:'GET'
+        }
+        
+        const apiReq=http.request(options,(apiRes)=>{
+            apiRes.on("data",(data)=>{
+                res.statusCode="200";
+                res.setHeader('content-Type','application/json')
+
+                res.end(data.toString())
+            })
+        })
+        apiReq.on("erro",()=>{
+            console.log(e)
+        })
+        
+        apiReq.end();
         
     }else{
         res.statusCode='500';
